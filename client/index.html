@@ -10,11 +10,12 @@
   <button class='js-toggle'>
     {{#if show}}Hide all items{{else}}Show all items{{/if}}
   </button>
+  <span>Clicking on this button repeatedly and check memory use</span>
 
   <ul>
     {{#each items}}
       {{#if show}}
-        <li data-index="{{index}}">item {{index}}</li>
+        <li class="item">item</li>
       {{/if}}
     {{/each}}
   </ul>

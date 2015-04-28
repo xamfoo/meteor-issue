@@ -3,10 +3,10 @@ Items = [];
 Session.set('show', true);
 
 Template.list.onCreated(function () {
-  for (var count = 0; count<1000; count+=1) {
+  for (var count=0; count<1000; count+=1) {
     Items.push({index: count});
   }
-})
+});
 
 Template.list.events({
   'click .js-toggle': function () {
