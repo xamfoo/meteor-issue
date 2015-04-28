@@ -1,0 +1,21 @@
+<head>
+  <title>Meteor</title>
+</head>
+
+<body>
+  {{> list}}
+</body>
+
+<template name="list">
+  <button class='js-toggle'>
+    {{#if show}}Hide all items{{else}}Show all items{{/if}}
+  </button>
+
+  <ul>
+    {{#each items}}
+      {{#if show}}
+        <li data-index="{{index}}">item {{index}}</li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</template>
