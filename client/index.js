@@ -2,11 +2,16 @@ Items = [];
 
 Session.set('show', true);
 
-Template.list.onCreated(function () {
+var generateItems = function () {
   for (var count=0; count<1000; count+=1) {
     Items.push({index: count});
   }
-});
+}
+
+if (Template.list.onCreated)
+  Template.list.onCreated(generateItems);
+else
+  Template.list.created = generateItems;
 
 Template.list.events({
   'click .js-toggle': function () {
